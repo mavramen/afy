@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat:400italic,400">
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Philosopher|Arimo">
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+        <!--link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css"-->
         <link rel="stylesheet" href="assets/css/animate.css">
         <link rel="stylesheet" href="assets/css/magnific-popup.css">
         <link rel="stylesheet" href="assets/flexslider/flexslider.css">
@@ -28,6 +28,7 @@
         <![endif]-->
 
         <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.ico" />
         <link rel="apple-touch-icon" sizes="57x57" href="assets/ico/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="assets/ico/apple-icon-60x60.png">
         <link rel="apple-touch-icon" sizes="72x72" href="assets/ico/apple-icon-72x72.png">
@@ -47,6 +48,7 @@
         <meta name="theme-color" content="#ffffff">
 
         <!-- Javascript -->
+
         <script src="assets/js/jquery-1.11.1.min.js"></script>
         <script src="assets/bootstrap/js/bootstrap.min.js"></script>
         <script src="assets/js/bootstrap-hover-dropdown.min.js"></script>
@@ -57,7 +59,7 @@
         <script src="assets/flexslider/jquery.flexslider-min.js"></script>
         <script src="assets/js/jflickrfeed.min.js"></script>
         <script src="assets/js/masonry.pkgd.min.js"></script>
-        <script src="http://maps.google.com/maps/api/js?key=AIzaSyAyx53aj_ZzBIiKeefLGDDZNn5kwR21DsY"></script>
+       <script src="http://maps.google.com/maps/api/js?key=AIzaSyBuW_tArn70PeThSmTIDFNLyfSG_piFKQQ"></script>
         <script src="assets/js/jquery.ui.map.min.js"></script>
         <script src="assets/js/scripts.js"></script>
         <script src="https://use.fontawesome.com/4838e0fd0b.js"></script>
@@ -99,7 +101,7 @@
                             sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper 
                             suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
                             sed do <strong>eiusmod tempor</strong> incididunt.
-                          
+
                         </p>
                     </div>
                 </div>
@@ -165,29 +167,19 @@
                             discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of <span class="chinese-red">"de Finibus Bonorum et Malorum" </span>
                             (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular 
                             during the Renaissance. The first line of <strong>Lorem Ipsum</strong>, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-                         
+
                         </p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Call To Action -->
-        <div class="call-to-donation-container">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 call-to-donation-text wow fadeInLeftBig">
-                        <p>
-                            Lorem ipsum <span class="chinese-red">dolor sit amet</span>, consectetur adipisicing elit, 
-                            sed do eiusmod tempor incididunt ut labore et ut wisi.
-                        </p>
-                        <div class="call-to-donation-button">
-                            <a class="big-link-3" href="#">Try It Now!</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!-- Call To Donation -->              
+        <div class="call-to-donation-container" id="donation-container">           
         </div>
+        <script>
+            $(this).loadDonate();
+        </script>
 
         <!-- Footer -->
         <footer id="footer-container"></footer>

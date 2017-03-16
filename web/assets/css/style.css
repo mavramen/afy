@@ -1,8 +1,8 @@
 
 
 @viewport {
-  width: device-width;
-  zoom: 1;
+    width: device-width;
+    zoom: 1;
 }
 
 body {
@@ -34,8 +34,8 @@ h3, h4 { line-height: 20px; }
 ::selection { background: #AA381E; color: #fff; text-shadow: none; }
 
 
-/***** Big links / buttons *****/
 
+/***** Big links / buttons *****/
 a.big-link-1 {
     display: inline-block;
     padding: 5px 22px;
@@ -159,7 +159,7 @@ ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #AA381E
 .navbar-brand {
     width: 167px;
     height: 106px;
-    background: url(../img/logo.gif) left center no-repeat;
+    background: url(../img/afy_logo.jpg) left center no-repeat;
     text-indent: -99999px;
 
 }
@@ -263,7 +263,7 @@ ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #AA381E
     font-size: 30px;
     color: #5d5d5d;
     font-weight: bold;
-    
+
 }
 
 .presentation-container p {
@@ -315,7 +315,7 @@ ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #AA381E
 
 .service h3 {
     margin-top: 13px;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Philosopher', sans-serif;
     font-size: 14px;
     color: #5d5d5d;
     font-weight: bold;
@@ -340,7 +340,7 @@ ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #AA381E
 }
 
 .work-title h2 {
-    width: 220px;
+    width: 260px;
     margin: 0 auto;
     background: #fff;
     font-family: 'Philosopher', sans-serif;
@@ -374,7 +374,7 @@ ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #AA381E
     margin-top: 20px;
     padding-left: 15px;
     padding-right: 15px;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Philosopher', sans-serif;
     font-size: 14px;
     color: #5d5d5d;
     font-weight: bold;
@@ -474,7 +474,7 @@ footer {
 
 .footer-box h4 {
     margin-top: 20px;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Philosopher', sans-serif;
     font-size: 14px;
     color: #5d5d5d;
     font-weight: bold;
@@ -586,7 +586,7 @@ footer {
 
 .about-us-text h3 {
     margin-top: 25px;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Philosopher', sans-serif;
     font-size: 16px;
     color: #5d5d5d;
     font-weight: bold;
@@ -604,7 +604,7 @@ footer {
 .about-us-text  .about-div {
     font-style: italic;
     float: left;
-    width: 33%
+    width: 33%;
 }
 
 
@@ -651,7 +651,7 @@ footer {
     margin-top: 20px;
     padding-left: 15px;
     padding-right: 15px;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Philosopher', sans-serif;
     font-size: 14px;
     color: #5d5d5d;
     font-weight: bold;
@@ -681,7 +681,7 @@ footer {
 
 .contact-us-container h3 {
     margin-top: 25px;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Philosopher', sans-serif;
     font-size: 16px;
     color: #5d5d5d;
     font-weight: bold;
@@ -741,7 +741,7 @@ footer {
 
 .services-full-width-text h3 {
     margin-top: 25px;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Philosopher', sans-serif;
     font-size: 16px;
     color: #5d5d5d;
     font-weight: bold;
@@ -768,7 +768,7 @@ footer {
 
 .services-half-width-text h3 {
     margin-top: 25px;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Philosopher', sans-serif;
     font-size: 16px;
     color: #5d5d5d;
     font-weight: bold;
@@ -831,7 +831,7 @@ footer {
 .portfolio-filters {
     padding-top: 35px;
     padding-bottom: 10px;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Philosopher', sans-serif;
     font-size: 16px;
     color: #5d5d5d;
     font-weight: bold;
@@ -887,7 +887,7 @@ footer {
 
 .portfolio-box-text h3 {
     margin-top: 20px;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Philosopher', sans-serif;
     font-size: 14px;
     color: #5d5d5d;
     font-weight: bold;
@@ -909,4 +909,33 @@ div.floatleft {
     position: relative;
     margin: 0 .5em .5em 0;
     border: 0;
+}
+span.gold_ribbon{
+    width: 167px;
+    height: 106px;
+    background: url(../img/gold_ribbon.jpg) left center no-repeat;
+    text-indent: -99999px; 
+}
+.thumbimage {
+    border: 1px solid #ccc;
+    float: left;
+
+}
+.thumbinner{    
+    padding: 3px !important;
+    background-color: #f8f8f8;
+    margin-top: 0px;
+    overflow: hidden;
+    float: left;
+    text-align: left;
+}
+
+.textIndent p{ 
+    text-indent: 50px; 
+}
+.no-account {
+    color: #888; 
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: default;
 }
