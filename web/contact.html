@@ -2,7 +2,7 @@
 <html lang="en">
 
     <head>
-       <meta charset="utf-8">
+        <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Alice Fong Yu Alternative School</title>
@@ -63,6 +63,8 @@
         <script src="assets/js/scripts.js"></script>
         <script src="https://use.fontawesome.com/4838e0fd0b.js"></script>
         <script src="assets/js/afy.js"></script>
+        
+        
     </head>
 
     <body>
@@ -85,43 +87,56 @@
             </div>
         </div>
 
+
+
         <!-- Contact Us -->
         <div class="contact-us-container">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-7 contact-form wow fadeInLeft">
-                        <p>
-                            Email us&nbsp;
-                        </p>
-                        <form role="form" action="assets/contact.php" method="post">
-                            <div class="form-group">
-                                <label for="contact-name">Name</label>
-                                <input type="text" name="name" placeholder="Enter your name..." class="contact-name" id="contact-name">
-                            </div>
-                            <div class="form-group">
-                                <label for="contact-email">Email</label>
-                                <input type="text" name="email" placeholder="Enter your email..." class="contact-email" id="contact-email">
-                            </div>
-                            <div class="form-group">
-                                <label for="contact-subject">Subject</label>
-                                <input type="text" name="subject" placeholder="Your subject..." class="contact-subject" id="contact-subject">
-                            </div>
-                            <div class="form-group">
-                                <label for="contact-message">Message</label>
-                                <textarea name="message" placeholder="Your message..." class="contact-message" id="contact-message"></textarea>
-                            </div>
-                            <button type="submit" class="btn">Send</button>
-                        </form>
-                    </div>
-                    <div class="col-sm-5 contact-address wow fadeInUp">
-                        <h3>We Are Here</h3>
-                        <div class="map"></div>
-                        <h3>Address</h3>
-                        <p>1541 12th. Avenue<br/>San Francisco, CA 94122</p>
-                        <p>Phone: (415)759-2764</p>
-                        <p>Fax: (415)242-2507</p>
+                  
 
-                    </div>
+                        <div class="col-sm-7 contact-form wow fadeInLeft">
+                            <p>
+                                Email us&nbsp;
+                            </p>
+                            <!--form role="form" action="assets/contact.php" method="post"-->
+                                <div class="form-group">
+                                    <label for="contact-name">Name</label>
+                                    <input type="text" name="name" placeholder="Enter your name..." class="contact-name" id="contact-name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-email">Email</label>
+                                    <input type="text" name="email" placeholder="Enter your email..." class="contact-email" id="contact-email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-subject">Subject</label>
+                                    <input type="text" name="subject" placeholder="Your subject..." class="contact-subject" id="contact-subject">
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-message">Message</label>
+                                    <textarea name="message" placeholder="Your message..." class="contact-message" id="contact-message"></textarea>
+                                </div>
+                                <button type="submit" onclick="sendMail(); return false" class="btn">Send</button>
+                            <!--/form-->
+                        </div>
+                        <div class="col-sm-5 contact-address wow fadeInUp">
+                            <h3>We Are Here</h3>
+                            <div class="map"></div>
+                            <h3>Address</h3>
+                            <p>1541 12th. Avenue<br/>San Francisco, CA 94122</p>
+                            <p>Phone: (415)759-2764</p>
+                            <p>Fax: (415)242-2507</p>
+
+                        </div>
+
+                    <script>
+                        function sendMail() {
+                           
+                            window.open('mailto:sch485@sfusd.edu?subject='+$('#contact-subject').val()+'; My name is '+$('#contact-name').val()+ '&from='+$('#contact-email').val()+'&body='+$('#contact-message').val());
+
+                        }
+                    </script>
+
                 </div>
             </div>
         </div>

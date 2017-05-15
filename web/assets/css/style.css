@@ -606,6 +606,9 @@ footer {
     float: left;
     width: 33%;
 }
+.bigger1 p, .bigger1 div{
+    font-size: 14px;
+}
 
 
 /***** Meet our team *****/
@@ -939,3 +942,4 @@ span.gold_ribbon{
     pointer-events: none;
     cursor: default;
 }
+
