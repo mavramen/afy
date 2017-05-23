@@ -636,6 +636,7 @@ footer {
     padding-bottom: 15px;
     background: #f8f8f8;
     border-bottom: 2px solid #AA381E;
+    
 }
 
 .team-box:hover img {
@@ -941,5 +942,18 @@ span.gold_ribbon{
     opacity: 0.5;
     pointer-events: none;
     cursor: default;
+}
+.floatleft {
+	float: left;
+	clear: left;
+	position: relative;
+	margin: 0 .5em .5em 0;
+	border: 0;
+}
+.textAlignLeft {
+     text-align: left;
+}
+.textMarginLeft {
+     margin-left: 50px;
 }
 

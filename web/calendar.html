@@ -47,6 +47,8 @@
         <meta name="msapplication-TileImage" content="assets/ico/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
 
+
+
         <!-- Javascript -->
 
         <script src="assets/js/jquery-1.11.1.min.js"></script>
@@ -68,15 +70,20 @@
 
 
         <script>
+           
             $(document).ready(function () {
-               $("#portal-container").html('<object id="page-object" style="position:absolute;top:0px;left:0px;display:block;width:100%;height:1200px;" data="https://afypa.org/forum/calendar.php"/>');
-               $("#page-object").ready(function(){
-                   $("#page-object").parent().height($(this).height()+150);
-               })
+               
+                $("#portal-container").html('<object id="page-object" type="text/plain" style="position:absolute;top:0px;left:0px;display:block;width:100%;height:' + ($(window).height() + 150) + 'px;" data="https://afypa.org/forum/calendar.php"/>');
+                             
+
+                 $("#page-object").ready(function () {  
+                    $("#page-object").parent().height($(this).height() + 150);
+                })
             });
         </script>
 
     </head>
+
 
     <body>
 
@@ -85,7 +92,8 @@
 
         </nav>
 
-              <div class="page-title-container">
+       
+        <div class="page-title-container">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 wow fadeIn">
@@ -96,29 +104,27 @@
                 </div>
             </div>
         </div>
-
+ 
         <!-- Services Full Width Text -->
         <div class="services-full-width-container">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 services-full-width-text wow fadeInLeft" style="padding: 0px;">
                         <div id="portal-container" >
-                            
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        
-        
 
-         <!-- Call To Donation -->
         <!-- Call To Donation -->              
         <div class="call-to-donation-container" id="donation-container">           
         </div>
+        
         <script>
-             $(this).loadDonate();
+            $(this).loadDonate();
         </script>
 
         <!-- Footer -->
