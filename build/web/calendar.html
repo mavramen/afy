@@ -72,10 +72,9 @@
         <script>
 
             $(document).ready(function () {
-
                 $("#portal-container").html('<object id="page-object" type="text/plain" style="position:absolute;top:0px;left:0px;display:block;width:100%;height:' + 
                         ($(window).height() + 150) + 
-                        'px;" data="https://afypa.org/forum/calendar.php"/>');
+                        'px;" data="'+oldURL+'forum/calendar.php"/>');
 
 
                 $("#page-object").ready(function () {

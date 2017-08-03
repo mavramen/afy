@@ -13,7 +13,12 @@ body {
     font-size: 12px;
 }
 
-.chinese-red { color: #AA381E;
+.chinese-red { 
+    color: #AA381E;
+}
+
+.black { 
+    color: #000000;
 }
 
 a {
@@ -950,10 +955,44 @@ span.gold_ribbon{
 	margin: 0 .5em .5em 0;
 	border: 0;
 }
+.floatright {
+	float: right;
+	clear: right;
+	position: relative;
+	margin: 0 .5em .5em 0;
+	border: 0;
+}
 .textAlignLeft {
      text-align: left;
 }
 .textMarginLeft {
-     margin-left: 50px;
+     margin-left: 30px;
 }
+.textFontSizeGrade {
+     font-size: 17px;
+}
+
+.paymentAddress{
+    border:1pt #ddd dotted;
+    margin-left: 30px;
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.pList{
+    margin-left: 30px;
+    text-align: left;
+    padding-left: 20px;
+}
+.ppForm input[type=text]{
+    margin-left: -5px;
+}
+.ppForm img{
+    margin-top: -5px;
+}
+.ppForm select{
+    font-size: 13px;
+}
+
 

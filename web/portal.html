@@ -68,7 +68,7 @@
 
         <script>
             $(document).ready(function () {
-               $("#portal-container").html('<object id="page-object" style="position:absolute;top:0px;left:0px;display:block;width:100%;height:1200px;" data="https://afypa.org/portal.php"/>');
+               $("#portal-container").html('<object id="page-object" style="position:absolute;top:0px;left:0px;display:block;width:100%;height:1200px;" data="'+oldURL+'portal.php"/>');
                $("#page-object").ready(function(){
                    $("#page-object").parent().height($(this).height()+150);
                })
