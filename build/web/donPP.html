@@ -65,6 +65,13 @@
         <script src="https://use.fontawesome.com/4838e0fd0b.js"></script>
         <script src="assets/js/afy.js"></script>
 
+        <script>
+
+            $(document).ready(function () {
+                $(".services-container .row>div").equalHeightFor('.lastDiv');
+                $(".eq .col-sm-6>div").equalHeightMax();
+            });
+        </script>
     </head>
 
     <body>
@@ -92,6 +99,7 @@
         <div class="services-full-width-container">
             <div class="container   bigger1">
                 <div class="row">
+
                     <div class="col-sm-12 services-full-width-text wow fadeInLeft">
                         <h3>You can support our school in many ways.</h3>
                         <p>
@@ -102,82 +110,282 @@
                         </p>
                     </div>
                 </div>
-            </div>
-        </div>
 
-
-        <!-- Services -->
-        <div class="services-container bigger1">
-            <div class="container">
                 <div class="row">
-                    <div class="col-sm-4">
-                        <div class="service wow fadeInUp">
-                            <div class="service-icon"><i class="fa fa-money"></i></div>
-                            <h3>To donate by Check&nbsp;:&nbsp;</h3>
-                            <p>
-                                <br/>Write checks payable to <br/> 
-                            </p>
-                            <p class="chinese-red textAlignLeft textMarginLeft">
-                                <b>
-                                    Alice Fong Yu Parents Association&nbsp;
-                                    <br/>(memo: Annual Fund)
-                                </b>
-                            </p>
-                            <p>
-                                and send them to
-                            </p>
-                            <p class="chinese-red textAlignLeft textMarginLeft">
-                                AFYPA Annual Fund <br/>
-                                Alice Fong Yu Alternative School<br/>
-                                1541 12th Avenue<br/>
-                                San Francisco, CA 94122
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-sm-8">
-                        <div class="service wow fadeInUp">
-                            <div class="service-icon"><i class="fa fa-paypal"></i></div>
-                            <h3>To donate online using Paypal&nbsp;:&nbsp;</h3>
-                            <p>
-                                <br/>You <b class="bigger1">do not</b> need a Paypal account to donate. 
-                            </p>
-                            <br/>
-                            <br/>
-                            <p class="floatleft">
-                                <a href="assets/img/Paypal.gif" class="image">
-                                    <img alt="Paypal.gif" src="assets/img/Paypal.gif" width="107" height="62">
-                                </a>
-                            </p>
-                            <p style="margin-bottom: 23px; ">
-                                <!--form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_parent"-->
-                                <input type="hidden" name="cmd" value="_xclick" />
-                                <input type="hidden" name="business" value="donate@afypa.org" />
-                                <input type="hidden" name="item_name" value="DONATE" />
-                                <input type="hidden" name="no_note" value="1" />
-                                <input type="hidden" name="no_shipping" value="2" />
-                                <input type="hidden" name="bn" value="PP-DonationsBF" />
-                                <input type="hidden" name="tax" value="0" />
-                                <input type="text" tabindex="11" name="amount" size="10" maxlength="6" value="" class="inputbox autowidth" title="Please use a decimal point (not a comma) as the separator, e.g. 3.50, in the box provided." />
-                                <select name="currency_code" class="autowidth">
-                                    <option value="USD" selected="selected">U.S Dollars (USD)</option>
-                                    <option value="CAD">Canadian Dollars (CAD)</option>
-                                    <option value="EUR">Euros (EUR)</option>
-                                </select>
-                                <input type="submit" name="submit" value="DONATE" class="button1" />&nbsp;<-- Click the Donate button.<br/>
-                                <!--/form-->
-                            </p>
-                            <br/>
-                            <br/>
-                            <br/>
-                            <br/>
-                            <br/>
-                            <br/>
+
+                    <!-- Services -->
+                    <div class="services-container bigger1">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="service wow fadeInUp">
+                                        <div class="service-icon"><i class="fa fa-money"></i></div>
+                                        <h3>To donate by Check&nbsp;:&nbsp;</h3>
+                                        <p class="textAlignLeft">
+                                            Write checks payable to<br/> 
+                                        </p>
+                                        <p class="black paymentAddress">
+                                            <b>
+                                                Alice Fong Yu Parents Association&nbsp;
+                                                <br/>(memo: Annual Fund)
+                                            </b>
+                                        </p>
+                                        <p class="textAlignLeft">
+                                            and send them to
+                                        </p>
+                                        <p class="black paymentAddress">
+                                            <b>
+                                                AFYPA Annual Fund <br/>
+                                                Alice Fong Yu Alternative School<br/>
+                                                1541 12th Avenue<br/>
+                                                San Francisco, CA 94122
+                                            </b>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="service wow fadeInUp ppForm">
+                                        <div class="service-icon"><i class="fa fa-paypal"></i></div>
+                                        <h3>To donate online using Paypal&nbsp;:&nbsp;</h3>
+                                        <p class="textAlignLeft">
+                                            You <b class="bigger1">do not</b> need a Paypal account to donate. &nbsp;:&nbsp;<br/><br/>
+                                        </p>
+
+                                        <p class="floatleft">
+                                            <img alt="Paypal.gif" src="assets/img/donate-paypal-main.png" width="93" height="45">
+                                            <!-- img alt="Paypal.gif" src="/wiki/Files/9/93/Paypal.gif" width="107" height="62" -->
+                                        </p>
+
+                                        <div class="textAlignLeft">
+                                            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_parent">
+                                                <input type="hidden" name="cmd" value="_xclick" />
+                                                <input type="hidden" name="business" value="donate@afypa.org" />
+                                                <input type="hidden" name="item_name" value="DONATE" />
+                                                <input type="hidden" name="no_note" value="1" />
+                                                <input type="hidden" name="no_shipping" value="2" />
+                                                <input type="hidden" name="bn" value="PP-DonationsBF" />
+                                                <input type="hidden" name="tax" value="0" />
+                                                <input type="text" tabindex="11" name="amount" size="10" maxlength="6" value="" class="inputbox autowidth" 
+                                                       title="Please use a decimal point (not a comma) as the separator, e.g. 3.50, in the box provided." />
+                                                <select name="currency_code" class="autowidth">
+                                                    <option value="USD" selected="selected">U.S Dollars (USD)</option>
+                                                    <option value="CAD">Canadian Dollars (CAD)</option>
+                                                    <option value="EUR">Euros (EUR)</option>
+                                                </select>
+                                                <input type="submit" name="submit" value="DONATE" class="button1" />&nbsp;<-- Click the Donate button.<br/>
+                                            </form>
+                                        </div>
+                                        <div class="textAlignLeft lastDiv"> 
+                                            <b>
+                                                &nbsp;
+                                                <br/>&nbsp;
+                                                <br/>&nbsp;
+                                                <br/>&nbsp;
+                                                <br/>&nbsp;
+                                                <br/>&nbsp;
+                                            </b>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
 
                         </div>
                     </div>
                 </div>
+
+                <div class="row">
+
+                    <div class="col-sm-12 services-full-width-text wow fadeInLeft">
+                        <h3>Payment Plans</h3>
+                        <p>
+                            <b>Another way to donate online is to use our Payment Plans. Paypal will automatically deduct the monthly amount from your account.</b>
+                            <br/>
+                        </p>
+                        <b>Instructions: </b>
+                        <p class="pList"> 
+                            1. Choose your donation Amount.<br/>
+                            2. Enter Student Name(s) next to Donate Amount / Interval button. Required for acknowledgement.<br/>
+                            3. Click the Donate Amount / Interval button.<br/>
+                        </p>
+
+
+                    </div>
+                </div>
+
+                <div class="row eq">
+                    <div class="col-sm-6">
+                        <div class="service wow fadeInUp">
+                            <h3>$888 Community Level</h3>
+                            <p class="textAlignLeft">
+                                Community level donors will be acknowledged on AFYPA.org.
+                                <br/><br/>
+                            </p>
+                            <div class="textAlignLeft">
+                                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_parent">
+                                    <input type="hidden" name="cmd" value="_s-xclick">
+                                    <!-- REPLACE the "hosted_button_id" value="NEW_NUMBER" below -->
+                                    <input type="hidden" name="hosted_button_id" value="YF4K2FD7KBU3Q">
+
+                                    <input type="hidden" name="on0" value="Student Name(s):">
+                                    Enter Student Name(s)&nbsp;:&nbsp;<input type="text" name="os0" maxlength="60">&nbsp;&nbsp;
+                                    <input type="submit" value="Submit">
+
+                                    <!-- REPLACE below with the new payment schedule -->
+                                    <br/>$111.00 deducted monthly for 8 months.
+                                    <br/>
+                                </form>
+                                <br/>
+                            </div>
+                            <br/><br/>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="service wow fadeInUp">
+                            <h3>$1500 Patron Level</h3>
+                            <p class="textAlignLeft">
+                                Patron level donors will be acknowledged on AFYPA.org. Patrons receive 4 complimentary Spring Auction tickets.
+                            </p>
+                            <div class="textAlignLeft">
+                                <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                                    <input type="hidden" name="cmd" value="_s-xclick">
+                                    <!-- REPLACE the "hosted_button_id" value="NEW_NUMBER" below -->
+                                    <input type="hidden" name="hosted_button_id" value="23HN9EETVW7T6">
+
+                                    <input type="hidden" name="on0" value="Student Name(s):">
+                                    Enter Student Name(s)&nbsp;:&nbsp;<input type="text" name="os0" maxlength="60">&nbsp;&nbsp;
+                                    <input type="submit" value="Submit">
+
+                                    <!-- REPLACE below with the new payment schedule -->
+                                    <br/>$250.00 deducted monthly for 6 months.<br/>
+                                </form>
+                                <br/>
+                                <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                                    <input type="hidden" name="cmd" value="_s-xclick">
+
+                                    <!-- REPLACE the "hosted_button_id" value="NEW_NUMBER" below -->
+                                    <input type="hidden" name="hosted_button_id" value="3DV4FDSB38YVS">
+
+                                    <input type="hidden" name="on0" value="Student Name(s):">
+                                    Enter Student Name(s)&nbsp;:&nbsp;<input type="text" name="os0" maxlength="60">&nbsp;&nbsp;
+                                    <input type="submit" value="Submit">
+
+                                    <!-- REPLACE below with the new payment schedule -->
+                                    <br/>$500.00 deducted monthly for 3 months.
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row eq"> 
+
+                    <div class="col-sm-6">
+                        <div class="service wow fadeInUp">
+
+                            <h3>$2500 Sponsor Level</h3>
+                            <p class="textAlignLeft">
+                                Sponsor level donors will be acknowledged on AFYPA.org. Sponsors receive 6 complimentary Spring Auction tickets.
+                                <br/>&nbsp;<br/>
+                            </p>
+                            <div class="textAlignLeft">
+                                <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                                    <input type="hidden" name="cmd" value="_s-xclick">
+
+                                    <!-- REPLACE the "hosted_button_id" value="NEW_NUMBER" below -->
+                                    <input type="hidden" name="hosted_button_id" value="4PNF555WTKPT2">
+
+                                    <input type="hidden" name="on0" value="Student Name(s):">
+                                    Enter Student Name(s):<input type="text" name="os0" maxlength="60">
+                                    <input type="submit" value="Submit">
+
+                                    <!-- REPLACE below with the new payment schedule -->
+                                    <br/>$416.66 deducted monthly for 6 months.
+                                </form>
+                                <br/>
+                                <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                                    <input type="hidden" name="cmd" value="_s-xclick">
+
+                                    <!-- REPLACE the "hosted_button_id" value="NEW_NUMBER" below -->
+                                    <input type="hidden" name="hosted_button_id" value="5LVDD9APV9B34">
+
+                                    <input type="hidden" name="on0" value="Student Name(s):">
+                                    Enter Student Name(s):<input type="text" name="os0" maxlength="60">
+                                    <input type="submit" value="Submit">
+
+                                    <!-- REPLACE below with the new payment schedule -->
+                                    <br/>$625.00 deducted monthly for 4 months.
+                                </form>
+                                <br/>
+                                <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                                    <input type="hidden" name="cmd" value="_s-xclick">
+
+                                    <!-- REPLACE the "hosted_button_id" value="NEW_NUMBER" below -->
+                                    <input type="hidden" name="hosted_button_id" value="QK8XNHY269KKC">
+
+                                    <input type="hidden" name="on0" value="Student Name(s):">
+                                    Enter Student Name(s):<input type="text" name="os0" maxlength="60">
+                                    <input type="submit" value="Submit">
+
+                                    <!-- REPLACE below with the new payment schedule -->
+                                    <br/>$833.33 deducted monthly for 3 months.
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="service wow fadeInUp">
+
+                            <h3>$5000 Champion Level</h3>
+                            <p class="textAlignLeft">
+                                Champion level donors will be acknowledged on AFYPA.org and in the Chinese New Year Banquet program. Champions receive a table for 10 at 
+                                the CNY Banquet and 8 complimentary Spring Auction tickets.
+                            </p>
+                            <div class="textAlignLeft">
+                                <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                                    <input type="hidden" name="cmd" value="_s-xclick">
+
+                                    <!-- REPLACE the "hosted_button_id" value="NEW_NUMBER" below -->
+                                    <input type="hidden" name="hosted_button_id" value="4P2DCD5WCX5T4">
+
+                                    <input type="hidden" name="on0" value="Student Name(s):">
+                                    Enter Student Name(s):<input type="text" name="os0" maxlength="60">
+                                    <input type="submit" value="Submit">
+
+                                    <!-- REPLACE below with the new payment schedule -->
+                                    <br/>$833.33 deducted monthly for 6 months.<br>
+                                </form>
+                                <br/>
+                                <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                                    <input type="hidden" name="cmd" value="_s-xclick">
+
+                                    <!-- REPLACE the "hosted_button_id" value="NEW_NUMBER" below -->
+                                    <input type="hidden" name="hosted_button_id" value="4AM7SCEJPVD3L">
+
+                                    <input type="hidden" name="on0" value="Student Name(s):">
+                                    Enter Student Name(s):<input type="text" name="os0" maxlength="60">
+                                    <input type="submit" value="Submit">
+
+                                    <!-- REPLACE below with the new payment schedule -->
+                                    <br/>$1666.66 deducted monthly for 3 months.
+                                </form>
+                                <br/><br/><br/>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
+
+
+
         </div>
+
+
 
 
 
@@ -187,9 +395,6 @@
         <!-- Call To Donation -->              
         <div class="call-to-donation-container" id="donation-container">           
         </div>
-        <script>
-            $(this).loadDonate();
-        </script>
 
         <!-- Footer -->
         <footer id="footer-container"></footer>
