@@ -1,10 +1,10 @@
 //var oldURL="https://afypa.org/";  //72.52.73.152
-var oldURL="http://72.52.73.152/";  
+var oldURL = "https://72.52.73.152/";
 
 
 $(document).ready(function () {
-    
-    
+
+
 
     /* <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->  */
     //$("head").append('<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries --><!-- WARNING: Respond.js does not work if you view the page via file:// --><!--[if lt IE 9]><script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>//<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script><![endif]-->');
@@ -44,16 +44,21 @@ jQuery.fn.extend({
     },
     equalHeightMax: function () {
         var max = 0;
-        $(this).each(function () {           
-            var h=$(this).innerHeight();          
-            if (max<h){
-                max=h;
-            }        
+        $(this).each(function () {
+            var h = $(this).innerHeight();
+            if (max < h) {
+                max = h;
+            }
         });
-        
-        $(this).each(function (index) {          
+
+        $(this).each(function (index) {
             $(this).css('height', max + 'px');
         });
-        
+
+    },
+    loadURL: function (location) {
+        console.log('here');
+        window.open(location);
+        return false;
     }
 });

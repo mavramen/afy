@@ -128,7 +128,14 @@
                     <div class="col-sm-3">
                         <div class="service wow fadeInUp">
                             <div class="service-icon"><i class="fa fa-amazon"></i></div>
-                            <h3>Amazon<br/><a href="https://afypa.org/amazon"  rel="nofollow" target="_blank">afypa.org/amazon</a></h3>
+                            <h3>Amazon<br/>
+                                <a href="#" rel="nofollow"  id="sd">afypa.org/amazon</a>.
+                                <script>
+                                    $("#sd").click(function () {
+                                        $(this).loadURL(oldURL + 'amazon');
+                                    });
+                                </script>
+                            </h3>
                             <p>
                                 Click the link above and save as a bookmark. The link above takes you to smile.amazon.com and includes the AFY id (afypa03-20).
                                 Smile.amazon.com will donate 0.5% (please choose Alice Fong Yu Parents Association as the charity) 
