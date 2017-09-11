@@ -162,7 +162,7 @@ ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #AA381E
 .navbar>.container .navbar-brand { margin-left: 0; }
 
 .navbar-brand {
-    width: 167px;
+    width: 111px;
     height: 106px;
     background: url(../img/afy_logo.jpg) left center no-repeat;
     text-indent: -99999px;
@@ -1013,3 +1013,14 @@ span.gold_ribbon{
 .dp-today-selected
 {background-color:red;}
 
+.pdfobject-container { 
+    height: 600px;
+}
+.pdfobject { border: 1px solid #666; }
+.pdfobject-container1 { 
+    height: 840px;
+}
+.fall {
+    background: url(../img/portfolio/fall.jpeg) left center repeat-x;
+    opacity: 0.5;
+}

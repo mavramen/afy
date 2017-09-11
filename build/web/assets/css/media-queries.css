@@ -57,7 +57,9 @@
     .call-to-action-text p { float: none; width: auto; padding-left: 0; text-align: center; }
     .call-to-action-text .call-to-action-button { float: none; width: auto; margin-top: 15px; margin-bottom: 15px; padding-right: 0; text-align: center; }
 
-    footer { padding-top: 20px; }
+     .call-to-donation-text .call-to-donation-button {width: 50%;padding-left: 25px;text-align: center; }
+    
+    .footer { padding-top: 20px; }
     .footer-box { text-align: center; }
     .footer-box-text-subscribe input[type="text"] { max-width: 300px; }
     .flickr-feed a { margin-left: 2px; margin-right: 2px; }
@@ -69,6 +71,7 @@
 @media (max-width: 400px) {
 
     .flex-caption { display: none; }
+   
 
 }
 
@@ -79,7 +82,7 @@
 
     /* logo */
     .navbar-brand {
-        background-image: url(../img/afy_logo@2x.jpg) !important; background-repeat: no-repeat !important; background-size: 167px 63px !important;
+        background-image: url(../img/afy_logo@2x.jpg) !important; background-repeat: no-repeat !important; background-size: 111px 106px !important;/*background-size: 167px 63px !important;*/
     }
 
 }

@@ -63,6 +63,7 @@
         <script src="assets/js/jquery.ui.map.min.js"></script>
         <script src="assets/js/scripts.js"></script>
         <script src="https://use.fontawesome.com/4838e0fd0b.js"></script>
+        <script src="assets/js/pdfobject.min.js"></script>
         <script src="assets/js/afy.js"></script>
 
     </head>
@@ -127,14 +128,20 @@
                 <div class="row">
                     <div class="col-sm-12 services-full-width-text wow fadeInLeft">
                         <p>VOLUNTEER BOOKLET&nbsp;:&nbsp;</p>
-                        <object width="100%" height="600" type="application/pdf" data="assets/docs/VOLUNTEER BOOKLET.pdf?#zoom=105&scrollbar=0&navpanes=0" title="VOLUNTEER BOOKLET">
-                            <!--object width="100%" height="8650" type="application/pdf" data="assets/docs/VOLUNTEER BOOKLET.pdf?#zoom=105&scrollbar=0&toolbar=0&navpanes=0" title="VOLUNTEER BOOKLET"-->
-                            <p>The PDF cannot be displayed.</p>
-                        </object>
+                        <!--object id="pdfObject" width="100%"  height="600" type="application/pdf" data="assets/docs/VOLUNTEER BOOKLET.pdf?#zoom=105&scrollbar=1&navpanes=1" title="VOLUNTEER BOOKLET">
+                        <!--object width="100%" height="8650" type="application/pdf" data="assets/docs/VOLUNTEER BOOKLET.pdf?#zoom=105&scrollbar=0&toolbar=0&navpanes=0" title="VOLUNTEER BOOKLET"-- >
+                        <p>Alternative text - include a link <a href="assets/docs/VOLUNTEER BOOKLET.pdf">to the VOLUNTEER BOOKLET.pdf!</a></p>
+                    </object-->
+                        <div id="pdfObject"></div>
+                        <script>
+                            var options = {
+                                fallbackLink: "<p>This browser does not support inline PDFs. Please download the VOLUNTEER BOOKLET.pdf : <a href='[url]'>Download file</a></p>",
+                                pdfOpenParams: { page: 1 ,zoom:105,scrollbar:1,navpanes:1}
+                            };
+                            PDFObject.embed("assets/docs/VOLUNTEER BOOKLET.pdf", "#pdfObject",options);
+                        </script>
                     </div>
                 </div>
-
-
             </div>
         </div>
 
