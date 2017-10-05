@@ -262,8 +262,11 @@ ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #AA381E
 .presentation-container {
     margin-top: 30px;
 }
+.presentation-container1 {
+    margin-top: 10px;
+}
 
-.presentation-container h1 {
+.presentation-container h1, .presentation-container1 h1 {
     font-family: 'Philosopher', sans-serif;
     font-size: 30px;
     color: #5d5d5d;
@@ -271,7 +274,7 @@ ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #AA381E
 
 }
 
-.presentation-container p {
+.presentation-container p, .presentation-container1 p {
     font-size: 18px;
     font-style: italic;
 }
@@ -343,8 +346,7 @@ ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #AA381E
 .work-title {
     background: url(../img/line.png) left center repeat-x;
 }
-
-.work-title h2 {
+.work-title h2, .work-title h3 {
     width: 260px;
     margin: 0 auto;
     background: #fff;
@@ -353,7 +355,9 @@ ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #AA381E
     color: #5d5d5d;
     font-weight: bold;
 }
-
+.work-title h3 {
+    font-size: 18px;
+}
 .work {
     margin-top: 40px;
     padding-bottom: 20px;
@@ -375,7 +379,7 @@ ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #AA381E
     margin-top: 15px;
 }
 
-.work h3 {
+.work h3  {
     margin-top: 20px;
     padding-left: 15px;
     padding-right: 15px;
@@ -1014,13 +1018,176 @@ span.gold_ribbon{
 {background-color:red;}
 
 .pdfobject-container { 
-    height: 600px;
+    height: 400px;
 }
-.pdfobject { border: 1px solid #666; }
+
+
 .pdfobject-container1 { 
     height: 840px;
 }
-.fall {
-    background: url(../img/portfolio/fall.jpeg) left center repeat-x;
-    opacity: 0.5;
+.tour{
+  padding-left: 8px;
+}
+.underline{
+    border:0;
+    border-bottom: 1px;
+    border-style: dotted;
+    border-color: #888;
+}
+a.link-icon:before,a.link-icon.link-file[id]:before {
+    content: "\f016"; /* generic file icon */
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+    width: 20px;
+    text-align: right;
+    margin-right: 10px;
+}
+a[id$=".txt"].link-icon:before, a.link-icon.link-text[id]:before {
+    content: "\f0f6"; /*Text*/
+}
+a[id$=".pdf"].link-icon:before,a.link-icon.link-pdf[id]:before {
+    content: "\f1c1"; /*PDF*/
+}
+a[id$=".doc"].link-icon:before,a[id$=".docx"].link-icon:before,a.link-icon.link-word[id]:before {
+    content: "\f1c2"; /*Word*/
+}
+a[id$=".xls"].link-icon:before,a[id$=".xlsx"].link-icon:before,a.link-icon.link-excel[id]:before {
+    content: "\f1c3"; /*Excel*/
+}
+a[id$=".ppt"].link-icon:before,a[id$=".pptx"].link-icon:before,a.link-icon.link-powerpoint[id]:before {
+    content: "\f1c4"; /*Powerpoint*/
+}
+a[id$=".gif"].link-icon:before,
+a[id$=".jpg"].link-icon:before,
+a[id$=".jpeg"].link-icon:before,
+a[id$=".png"].link-icon:before,
+a[id$=".bmp"].link-icon:before,
+a[id$=".tif"].link-icon:before,
+a.link-icon.link-image[id]:before {
+    content: "\f1c5"; /*Image*/
+}
+a[id$=".zip"].link-icon:before,
+a[id$=".zipx"].link-icon:before,
+a[id$=".rar"].link-icon:before,
+a[id$=".tar"].link-icon:before,
+a[id$=".gz"].link-icon:before,
+a[id$=".dmg"].link-icon:before,
+a[id$=".iso"].link-icon:before,
+a.link-icon.link-archive[id]:before {
+    content: "\f1c6"; /*Archive*/
+}
+a[id$=".wav"].link-icon:before,
+a[id$=".mp3"].link-icon:before,
+a[id$=".fla"].link-icon:before,
+a[id$=".flac"].link-icon:before,
+a[id$=".ra"].link-icon:before,
+a[id$=".rma"].link-icon:before,
+a[id$=".aif"].link-icon:before,
+a[id$=".aiff"].link-icon:before,
+a[id$=".aa"].link-icon:before,
+a[id$=".aac"].link-icon:before,
+a[id$=".aax"].link-icon:before,
+a[id$=".ac3"].link-icon:before,
+a[id$=".au"].link-icon:before,
+a[id$=".ogg"].link-icon:before,
+a[id$=".avr"].link-icon:before,
+a[id$=".3ga"].link-icon:before,
+a[id$=".flac"].link-icon:before,
+a[id$=".mid"].link-icon:before,
+a[id$=".midi"].link-icon:before,
+a[id$=".m4a"].link-icon:before,
+a[id$=".mp4a"].link-icon:before,
+a[id$=".amz"].link-icon:before,
+a[id$=".mka"].link-icon:before,
+a[id$=".asx"].link-icon:before,
+a[id$=".pcm"].link-icon:before,
+a[id$=".m3u"].link-icon:before,
+a[id$=".wma"].link-icon:before,
+a[id$=".xwma"].link-icon:before,
+a.link-icon.link-audio[id]:before {
+    content: "\f1c7"; /*Audio*/
+}
+a[id$=".avi"].link-icon:before,
+a[id$=".mpg"].link-icon:before,
+a[id$=".mp4"].link-icon:before,
+a[id$=".mkv"].link-icon:before,
+a[id$=".mov"].link-icon:before,
+a[id$=".wmv"].link-icon:before,
+a[id$=".vp6"].link-icon:before,
+a[id$=".264"].link-icon:before,
+a[id$=".vid"].link-icon:before,
+a[id$=".rv"].link-icon:before,
+a[id$=".webm"].link-icon:before,
+a[id$=".swf"].link-icon:before,
+a[id$=".h264"].link-icon:before,
+a[id$=".flv"].link-icon:before,
+a[id$=".mk3d"].link-icon:before,
+a[id$=".gifv"].link-icon:before,
+a[id$=".oggv"].link-icon:before,
+a[id$=".3gp"].link-icon:before,
+a[id$=".m4v"].link-icon:before,
+a[id$=".movie"].link-icon:before,
+a[id$=".divx"].link-icon:before,
+a.link-icon.link-video[id]:before {
+    content: "\f1c8"; /*Video*/
+}
+a[id$=".css"].link-icon:before,
+a[id$=".js"].link-icon:before,
+a[id$=".py"].link-icon:before,
+a[id$=".git"].link-icon:before,
+a[id$=".py"].link-icon:before,
+a[id$=".cpp"].link-icon:before,
+a[id$=".h"].link-icon:before,
+a[id$=".ini"].link-icon:before,
+a[id$=".config"].link-icon:before,
+a.link-icon.link-code[id]:before {
+    content: "\f1c9"; /*code*/
+}
+a[id$=".exe"].link-icon:before,
+a[id$=".jar"].link-icon:before,
+a[id$=".dll"].link-icon:before,
+a[id$=".bat"].link-icon:before,
+a[id$=".pl"].link-icon:before,
+a[id$=".scr"].link-icon:before,
+a[id$=".msi"].link-icon:before,
+a[id$=".app"].link-icon:before,
+a[id$=".deb"].link-icon:before,
+a[id$=".apk"].link-icon:before,
+a[id$=".jar"].link-icon:before,
+a[id$=".vb"].link-icon:before,
+a[id$=".prg"].link-icon:before,
+a[id$=".sh"].link-icon:before,
+a.link-icon.link-exe[id]:before {
+    content: "\f085"; /*Executable*/
+}
+
+a[id$=".com"].link-icon:before,
+a[id$=".net"].link-icon:before,
+a[id$=".org"].link-icon:before,
+a[id$=".edu"].link-icon:before,
+a[id$=".gov"].link-icon:before,
+a[id$=".mil"].link-icon:before,
+a[id$="/"].link-icon:before,
+a[id$=".html"].link-icon:before,
+a[id$=".htm"].link-icon:before,
+a[id$=".xhtml"].link-icon:before,
+a[id$=".jhtml"].link-icon:before,
+a[id$=".php"].link-icon:before,
+a[id$=".php3"].link-icon:before,
+a[id$=".php4"].link-icon:before,
+a[id$=".php5"].link-icon:before,
+a[id$=".phtml"].link-icon:before,
+a[id$=".asp"].link-icon:before,
+a[id$=".aspx"].link-icon:before,
+a[id$=".cfm"].link-icon:before,
+a[id*="?"].link-icon:before,
+a[id*="#"].link-icon:before,
+a.link-icon:not([id*='.']):before,
+a.link-icon.link[id]:before {
+    content: "\f0c1"; /*link*/
 }

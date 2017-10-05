@@ -64,9 +64,18 @@
         <script src="https://use.fontawesome.com/4838e0fd0b.js"></script>
         <script src="assets/js/afy.js"></script>
 
+        <script src="assets/js/jquery-dateFormat.min.js"></script>
+
+
+
+
         <script>
+            var dirID = '0B2O1Jb96t9jhZUdoNU0ySDJjN00';
             $(document).ready(function () {
-                $("#docs-container").html('<iframe id="page-object" src="https://drive.google.com/embeddedfolderview?id=0B2O1Jb96t9jhZUdoNU0ySDJjN00#list" width="800" height="600" frameborder="0"></iframe>');
+                //$("#docs-container").html('<iframe id="page-object" src="https://drive.google.com/embeddedfolderview?id=0B2O1Jb96t9jhZUdoNU0ySDJjN00#list" width="800" height="600" frameborder="0"></iframe>');
+                //$('#page-object').ready(function () {
+                    $(this).listGoogleDocsFiles("docs-container", dirID);
+                //});
             });
         </script>
 
@@ -76,7 +85,7 @@
 
         <!-- Top menu -->
         <nav class="navbar community" role="navigation" id="nav-container">
-            <!-- test123 -->
+
         </nav>
 
         <div class="page-title-container">
@@ -85,7 +94,7 @@
                     <div class="col-sm-12 wow fadeIn">
                         <i class="fa fa-info-circle"></i>
                         <h1>Documents /</h1>
-                        <p>Here are some documents - <span class="textFontSizeGrade">General</span></p>
+                        <p>Here are some documents - <span class="textFontSizeGrade">Weekly Bulletin</span></p>
                     </div>
                 </div>
             </div>
@@ -104,18 +113,7 @@
             </div>
         </div>
 
-        <!-- Services Full Width Text -->
-        <div class="services-full-width-container">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 services-full-width-text wow fadeInLeft" style="padding: 0px;">
-                        <div id="docs-container123" >
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+       
 
 
         <!-- Call To Donation -->

@@ -167,7 +167,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-3">
+                    <!--div class="col-sm-3">
                         <div class="work wow fadeInDown">
                             <img src="assets/img/portfolio/work2.jpg" alt="Introduction" data-at2x="assets/img/portfolio/work2.jpg">
                             <h3>Introduction</h3>
@@ -181,7 +181,7 @@
 
                             </div>
                         </div>
-                    </div>
+                    </div-->
                     <div class="col-sm-3">
                         <div class="work wow fadeInUp">
                             <img src="assets/img/portfolio/work3.jpg" alt="Welcome!" data-at2x="assets/img/portfolio/work3.jpg">
@@ -190,6 +190,19 @@
                             <div class="work-bottom">
                                 <a class="big-link-2 view-work" href="assets/img/portfolio/work3.jpg"><i class="fa fa-search"></i></a>
                                 <a class="big-link-2" href="photoAlbum.html"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="work wow fadeInUp">
+                            <img src="assets/img/portfolio/work50.jpg" alt="Walk the Great Wall!" data-at2x="assets/img/portfolio/work50.jpg">
+                            <h3>Walk the Great Wall!</h3>
+                            <p>Join us and promote your business in our active community!... 
+                                <br/> <br/>
+                            </p>
+                            <div class="work-bottom">
+                                <a class="big-link-2 view-work" href="assets/img/portfolio/work50.jpg"><i class="fa fa-search"></i></a>
+                                <a class="big-link-2" href="walkGreatWall.html"><i class="fa fa-link"></i></a>
                             </div>
                         </div>
                     </div>
@@ -279,7 +292,13 @@
                             <div class="service-icon"><i class="fa fa-sticky-note"></i></div>
                             <h3>Weekly Parent Bulletin</h3>
                             <p>Our weekly Parental Bulletin will keep you up to date with what's happening in and out of school in the coming week.</p>
-                            <a class="big-link-1" href="docsWeekly.html">Read more</a>
+                            <a class="big-link-1" href="docsWeekly.html" id="weekBul">Read more</a>
+                            <script>
+                                //console.log($('#weekBul').attr('href'));
+                                var dirID = '0B2O1Jb96t9jhZUdoNU0ySDJjN00';
+                                $(this).createLinkToNewestFile(dirID,'weekBul');
+                                //console.log($('#weekBul').attr('href'));
+                            </script>
                         </div>
                     </div>
                 </div>

@@ -100,46 +100,137 @@
                                 can-do attitude and who support the uniquely high standards of the AFY principal, teachers, and staff.
                                 Parents are encouraged to volunteer. Some weekly volunteer opportunities are as follows:
                             </p>
-                            <ul>
-                                <li> Class parent</li>
-                                <li> Reading in Chinese or English </li>
-                                <li> Morning drop-off zone</li>
-                                <li> Before or after-school tutoring</li>
-                                <li> Art class assistance</li>
-                                <li> Garden assistance</li>
-                            </ul>
+                            <div class="col-sm-6">
+                                <ul>
+                                    <li> Class parent</li>
+                                    <li> Reading in Chinese or English </li>
+                                    <li> Morning drop-off zone</li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6">
+                                <ul>
+                                    <li> Before or after-school tutoring</li>
+                                    <li> Art class assistance</li>
+                                    <li> Garden assistance</li>
+                                </ul>
+                            </div>
                             <p>
                                 AFY offers ample special events, which are not feasible without parent volunteers. These are rewarding, memory-making endeavors 
                                 for parents and their AFY children.
                             </p>
-                            <ul>
-                                <li> China Cultural Exchange Program</li>
-                                <li> Chinese New Year Parade</li>
-                                <li> Fall Carnival</li>
-                                <li> Science Fair (Middle School)</li>
-                                <li> Spring Festival</li>
-                                <li> Spring Auction</li>
-                                <li> Walk the Great Wall</li>
-                            </ul>
+                            <div class="col-sm-6">
+                                <ul>
+                                    <li> China Cultural Exchange Program</li>
+                                    <li> Chinese New Year Parade</li>
+                                    <li> Fall Carnival</li>
+                                    <li> Science Fair (Middle School)</li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6">
+                                <ul>
+                                    <li> Spring Festival</li>
+                                    <li> Spring Auction</li>
+                                    <li> Walk the Great Wall</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-sm-12 services-full-width-text wow fadeInLeft">
-                        <p>VOLUNTEER BOOKLET&nbsp;:&nbsp;</p>
-                        <!--object id="pdfObject" width="100%"  height="600" type="application/pdf" data="assets/docs/VOLUNTEER BOOKLET.pdf?#zoom=105&scrollbar=1&navpanes=1" title="VOLUNTEER BOOKLET">
-                        <!--object width="100%" height="8650" type="application/pdf" data="assets/docs/VOLUNTEER BOOKLET.pdf?#zoom=105&scrollbar=0&toolbar=0&navpanes=0" title="VOLUNTEER BOOKLET"-- >
-                        <p>Alternative text - include a link <a href="assets/docs/VOLUNTEER BOOKLET.pdf">to the VOLUNTEER BOOKLET.pdf!</a></p>
-                    </object-->
-                        <div id="pdfObject"></div>
-                        <script>
-                            var options = {
-                                fallbackLink: "<p>This browser does not support inline PDFs. Please download the VOLUNTEER BOOKLET.pdf : <a href='[url]'>Download file</a></p>",
-                                pdfOpenParams: { page: 1 ,zoom:105,scrollbar:1,navpanes:1}
-                            };
-                            PDFObject.embed("assets/docs/VOLUNTEER BOOKLET.pdf", "#pdfObject",options);
-                        </script>
+                    <div class="col-sm-12 wow fadeInLeft work-container">
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="work-title wow fadeIn">
+                                    <h3>VOLUNTEER BOOKLET</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <br/>
+
+                            <!--object id="pdfObject" width="100%"  height="600" type="application/pdf" data="assets/docs/VOLUNTEER BOOKLET.pdf?#zoom=105&scrollbar=1&navpanes=1" title="VOLUNTEER BOOKLET">
+                            <!--object width="100%" height="8650" type="application/pdf" data="assets/docs/VOLUNTEER BOOKLET.pdf?#zoom=105&scrollbar=0&toolbar=0&navpanes=0" title="VOLUNTEER BOOKLET"-- >
+                            <p>Alternative text - include a link <a href="assets/docs/VOLUNTEER BOOKLET.pdf">to the VOLUNTEER BOOKLET.pdf!</a></p>
+                        </object-->
+                            <div id="pdfObject"></div>
+                            <script>
+                                if (PDFObject.supportsPDFs) {
+                                    //console.log("Yay, this browser supports inline PDFs.");
+                                    var options = {
+                                        fallbackLink: "<p>This browser does not support inline PDFs. Please download the VOLUNTEER BOOKLET.pdf : <a href='[url]'>Download file</a></p>",
+                                        pdfOpenParams: {page: 1, zoom: 85, scrollbar: 1, navpanes: 1}
+                                    };
+                                    PDFObject.embed(volunteerBooklet, "#pdfObject", options);
+
+                                } else {
+                                    //console.log("Boo, inline PDFs are not supported by this browser");
+                                    $("#pdfObject").html("<object data='"+volunteerBooklet+"#zoom=85&scrollbar=1&navpanes=1&page=1' "+
+                                    "type='application/pdf' width='100%' height='440px'></object>")
+                                }
+                            </script>
+                            <br/>
+                            <div id="pdfObject1"></div>
+                            
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class=" col-sm-12 work-container wow fadeInLeft work-container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="work-title wow fadeIn">
+                                    <h3>DROP OFF ZONE</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="work wow fadeInUp">
+                                    <img src="assets/img/portfolio/dropp2.jpg" alt="Drop Off Zone parent information" data-at2x="assets/img/portfolio/dropp2.jpg">
+                                    <h3>Parent information...</h3>
+                                    <div class="work-bottom">
+                                        Read more here ...<br/>
+                                        <a class="big-link-2" href="assets/docs/Drop Off Zone parent information.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="work wow fadeInDown">
+                                    <img src="assets/img/portfolio/dropp1.jpg" alt="Drop Off Zone faq" data-at2x="assets/img/portfolio/dropp1.jpg">
+                                    <h3>FAQ</h3>
+                                    <div class="work-bottom">
+                                        Read more here ...<br/>
+                                        <a class="big-link-2" href="assets/docs/Drop Off Zone faq.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="work wow fadeInDown">
+                                    <img src="assets/img/portfolio/dropp3.jpg" alt="Drop Off Zone_setup instructions" data-at2x="assets/img/portfolio/dropp3.jpg">
+                                    <h3>Setup instructions</h3>
+                                    <div class="work-bottom">
+                                        Read more here ...<br/>
+                                        <a class="big-link-2" href="assets/docs/Drop Off Zone_setup instructions.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="work wow fadeInDown">
+                                    <img src="assets/img/portfolio/dropp4.jpg" alt="Submit please" data-at2x="assets/img/portfolio/dropp4.jpg">
+                                    <div data-wow-duration="2s" data-wow-iteration="80" class="wow pulse">
+                                        <h3>If YOU want to volunteer, PLEASE sign up here </h3>
+                                    </div>
+                                    <div class="work-bottom">
+                                        <a class="big-link-2" href="http://www.signupgenius.com/go/20f0444afad2ca3fd0-afydrop" target="_blank"><i class="fa fa-user-plus"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,100 +1,66 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head></head>
+  <body>
+    <script type="text/javascript">
+      function handleClientLoad() {
+        // Loads the client library and the auth2 library together for efficiency.
+        // Loading the auth2 library is optional here since `gapi.client.init` function will load
+        // it if not already loaded. Loading it upfront can save one network request.
+        gapi.load('client:auth2', initClient);
+      }
 
+      function initClient() {
+        // Initialize the client with API key and People API, and initialize OAuth with an
+        // OAuth 2.0 client ID and scopes (space delimited string) to request access.
+        gapi.client.init({
+            apiKey: 'AIzaSyBuW_tArn70PeThSmTIDFNLyfSG_piFKQQ',
+            discoveryDocs: ["https://people.googleapis.com/$discovery/rest?version=v1"],
+            clientId: '100213111164-v8un5cp1i6r6tesr0cd1gsc4jc6t7evb.apps.googleusercontent.com',
+            scope: 'profile'
+        }).then(function () {
+          // Listen for sign-in state changes.
+          gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
 
+          // Handle the initial sign-in state.
+          updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+        });
+      }
 
-        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-        <title>Google Picker Example</title>
+      function updateSigninStatus(isSignedIn) {
+        // When signin status changes, this function is called.
+        // If the signin status is changed to signedIn, we make an API call.
+        if (isSignedIn) {
+          makeApiCall();
+        }
+      }
 
-        <script type="text/javascript">
+      function handleSignInClick(event) {
+        // Ideally the button should only show up after gapi.client.init finishes, so that this
+        // handler won't be called before OAuth is initialized.
+        gapi.auth2.getAuthInstance().signIn();
+      }
 
-            // The Browser API key obtained from the Google API Console.
-            // Replace with your own Browser API key, or your own key.
-            var developerKey = 'AIzaSyBuW_tArn70PeThSmTIDFNLyfSG_piFKQQ';
+      function handleSignOutClick(event) {
+        gapi.auth2.getAuthInstance().signOut();
+      }
 
-            // The Client ID obtained from the Google API Console. Replace with your own Client ID.
-            var clientId = "100213111164-514qaa35bb24o5i4ia707b4lc3e08cu0.apps.googleusercontent.com"
-
-            // Replace with your own project number from console.developers.google.com.
-            // See "Project number" under "IAM & Admin" > "Settings"
-            var appId = "100213111164";
-
-            // Scope to use to access user's Drive items.
-            var scope = ['https://www.googleapis.com/auth/drive'];
-
-            var pickerApiLoaded = false;
-            var oauthToken;
-
-            // Use the Google API Loader script to load the google.picker script.
-            function loadPicker() {
-                gapi.load('auth', {'callback': onAuthApiLoad});
-                gapi.load('picker', {'callback': onPickerApiLoad});
-            }
-
-            function onAuthApiLoad() {
-                window.gapi.auth.authorize(
-                        {
-                            'client_id': clientId,
-                            'scope': scope,
-                            'immediate': false
-                        },
-                        handleAuthResult);
-            }
-
-            function onPickerApiLoad() {
-                pickerApiLoaded = true;
-                createPicker();
-            }
-
-            function handleAuthResult(authResult) {
-                if (authResult && !authResult.error) {
-                    oauthToken = authResult.access_token;
-                    createPicker();
-                }
-            }
-
-            // Create and render a Picker object for searching images.
-            function createPicker() {
-                if (pickerApiLoaded && oauthToken) {
-                    var view = new google.picker.View(google.picker.ViewId.DOCS);
-                    view.setMimeTypes("image/png,image/jpeg,image/jpg");
-                    var picker = new google.picker.PickerBuilder()
-                            .enableFeature(google.picker.Feature.NAV_HIDDEN)
-                            .enableFeature(google.picker.Feature.MULTISELECT_ENABLED)
-                            .setAppId(appId)
-                            .setOAuthToken(oauthToken)
-                            .addView(view)
-                            .addView(new google.picker.DocsUploadView())
-                            .setDeveloperKey(developerKey)
-                            .setCallback(pickerCallback)
-                            .build();
-                    picker.setVisible(true);
-                }
-            }
-
-            // A simple callback implementation.
-            function pickerCallback(data) {
-                if (data.action == google.picker.Action.PICKED) {
-                    var fileId = data.docs[0].id;
-                    alert('The user selected: ' + fileId);
-                }
-            }
-        </script>
-
-    </head>
-    <body>
-        <div id="result"></div>
-
-        <!-- The Google API Loader script. -->
-        <script type="text/javascript" src="https://apis.google.com/js/api.js?onload=loadPicker"></script>
-    </body>
+      function makeApiCall() {
+        // Make an API call to the People API, and print the user's given name.
+        gapi.client.people.people.get({
+          'resourceName': 'people/me',
+          'requestMask.includeField': 'person.names'
+        }).then(function(response) {
+          console.log('Hello, ' + response.result.names[0].givenName);
+        }, function(reason) {
+          console.log('Error: ' + reason.result.error.message);
+        });
+      }
+    </script>
+    <script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
+    <button id="signin-button" onclick="handleSignInClick()">Sign In</button>
+    <button id="signout-button" onclick="handleSignOutClick()">Sign Out</button>
+  </body>
 </html>
