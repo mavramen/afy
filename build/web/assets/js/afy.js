@@ -4,6 +4,8 @@ var volunteerBooklet = "assets/docs/VOLUNTEER BOOKLET.pdf";
 var CLIENT_ID = '100213111164-v8un5cp1i6r6tesr0cd1gsc4jc6t7evb.apps.googleusercontent.com';
 var API_KEY = 'AIzaSyBuW_tArn70PeThSmTIDFNLyfSG_piFKQQ';
 
+var CARNIVAL_DATE = "10/15/2017";
+
 $(document).ready(function () {
 
 
@@ -127,5 +129,10 @@ jQuery.fn.extend({
             console.log("complete");
         });
 
+    },
+    dontShowAfterDate: function (containerID, dateString/* MM/DD/YYYY  */) {
+        var dtrue = Date.compare(Date.today(), Date.parse(dateString));
+        //console.log((dtrue == 1) ? 'in the past' : 'in the future');
+        (dtrue == 1) ? $('#' + containerID).hide() : $('#' + containerID).show();
     }
 });

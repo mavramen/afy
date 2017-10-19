@@ -65,6 +65,7 @@
         <script src="https://use.fontawesome.com/4838e0fd0b.js"></script>
         <script src="assets/js/pdfobject.min.js"></script>
         <script src="assets/js/afy.js"></script>
+        <script type="text/javascript" src="assets/js/date.js"></script>
 
     </head>
 
@@ -100,7 +101,7 @@
                             The Carnival team needs YOU!
                             Please sign up to help
                             <a class="schooltourlink" href="http://www.tinyurl.com/afy2017carnival" target="_blank">&nbsp;Sign up here!&nbsp;</a>
-                            <a class="big-link-2 tour schooltourlink" href="http://www.tinyurl.com/afy2017carnival" target="_blank"><i class="fa fa-bullhorn"></i></a>
+                            <a class="big-link-2 tour schooltourlink" href="http://www.tinyurl.com/afy2017carnival" target="_blank"><i class="fa fa-user-plus"></i></a>
                         </p>
                     </div>
                     <div class="col-sm-3">
@@ -112,67 +113,71 @@
 
                 <div class="row">
                     <div class="col-sm-5">
-                        <div class="service wow fadeInUp">
-                            <div class="service-icon"><i class="fa fa-paypal"></i></div>
-                            <h3>To buy tickets online using Paypal&nbsp;:&nbsp;</h3>
-                            <p>
-                                You <b class="bigger1">do not</b> need a Paypal account
-                            </p>
-                        </div>
-
-                        <div class="service wow fadeInUp">
-                            <h3>2017 AFYPA Carnival -- <b>135 Tickets</b></h3>
-                            <div>
-                                Cost:  $100
-                                <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                                    <input type="hidden" name="cmd" value="_s-xclick">
-                                    <input type="hidden" name="hosted_button_id" value="YPAREAJ59MJE4">
-                                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-                                </form>
+                        <div id="showButtonsByDate">
+                            <div class="service wow fadeInUp">
+                                <div class="service-icon"><i class="fa fa-paypal"></i></div>
+                                <h3>To buy tickets online using Paypal&nbsp;:&nbsp;</h3>
+                                <p>
+                                    You <b class="bigger1">do not</b> need a Paypal account
+                                </p>
                             </div>
-                        </div>
 
-                        <div class="service wow fadeInUp">
-                            <h3>2017 AFYPA Carnival -- <b>12 Tickets</b></h3>
-                            <div>
-                                Cost:  $10
-                                <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                                    <input type="hidden" name="cmd" value="_s-xclick">
-                                    <input type="hidden" name="hosted_button_id" value="W575YWT24LF9L">
-                                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-                                </form>
+                            <div class="service wow fadeInUp">
+                                <h3>2017 AFYPA Carnival -- <b>135 Tickets</b></h3>
+                                <div>
+                                    Cost:  $100
+                                    <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                                        <input type="hidden" name="cmd" value="_s-xclick">
+                                        <input type="hidden" name="hosted_button_id" value="YPAREAJ59MJE4">
+                                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                                        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                                    </form>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="service wow fadeInUp">
-                            <h3>2017 AFYPA Carnival Gift Basket Raffle -- <b>1 Ticket</b></h3>
-                            <div>
-                                Cost:  $5
-                                <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                                    <input type="hidden" name="cmd" value="_s-xclick">
-                                    <input type="hidden" name="hosted_button_id" value="4CESMNK8FY57C">
-                                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-                                </form>
+                            <div class="service wow fadeInUp">
+                                <h3>2017 AFYPA Carnival -- <b>12 Tickets</b></h3>
+                                <div>
+                                    Cost:  $10
+                                    <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                                        <input type="hidden" name="cmd" value="_s-xclick">
+                                        <input type="hidden" name="hosted_button_id" value="W575YWT24LF9L">
+                                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                                        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                                    </form>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="service wow fadeInUp">
-                            <h3>2017 AFYPA Carnival iPad Raffle -- <b>1 Ticket</b></h3>
-                            <div>
-                                Cost:  $5
-                                <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                                    <input type="hidden" name="cmd" value="_s-xclick">
-                                    <input type="hidden" name="hosted_button_id" value="DCU8EK3L5ZXTU">
-                                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-                                </form>
+                            <div class="service wow fadeInUp">
+                                <h3>2017 AFYPA Carnival Gift Basket Raffle -- <b>1 Ticket</b></h3>
+                                <div>
+                                    Cost:  $5
+                                    <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                                        <input type="hidden" name="cmd" value="_s-xclick">
+                                        <input type="hidden" name="hosted_button_id" value="4CESMNK8FY57C">
+                                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                                        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                                    </form>
+                                </div>
                             </div>
+
+                            <div class="service wow fadeInUp">
+                                <h3>2017 AFYPA Carnival iPad Raffle -- <b>1 Ticket</b></h3>
+                                <div>
+                                    Cost:  $5
+                                    <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                                        <input type="hidden" name="cmd" value="_s-xclick">
+                                        <input type="hidden" name="hosted_button_id" value="DCU8EK3L5ZXTU">
+                                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                                        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                                    </form>
+                                </div>
+                            </div>
+
                         </div>
-
-
+                        <script>
+                            $(this).dontShowAfterDate("showButtonsByDate", CARNIVAL_DATE);
+                        </script>
 
 
                     </div>
@@ -180,11 +185,18 @@
                         <br/><br/>
                         <div id="pdfObject" class="pdfobject-container1"></div>
                         <script>
-                            var options = {
-                                fallbackLink: "<p>This browser does not support inline PDFs. Please download the VOLUNTEER BOOKLET.pdf : <a href='[url]'>Download file</a></p>",
-                                pdfOpenParams: {page: 1, zoom: 80, scrollbar: 1, navpanes: 1}
-                            };
-                            PDFObject.embed("assets/docs/Carnival Flyer 2017 TicketPre.Sales.pdf", "#pdfObject", options);
+                            if (PDFObject.supportsPDFs) {
+                                //console.log("Yay, this browser supports inline PDFs.");
+                                var options = {
+                                    fallbackLink: "<p>This browser does not support inline PDFs. Please download the VOLUNTEER BOOKLET.pdf : <a href='[url]'>Download file</a></p>",
+                                    pdfOpenParams: {page: 1, zoom: 80, scrollbar: 1, navpanes: 1}
+                                };
+                                PDFObject.embed("assets/docs/Carnival Flyer 2017 TicketPre.Sales.pdf", "#pdfObject", options);
+                            } else {
+                                //console.log("Boo, inline PDFs are not supported by this browser");
+                                $("#pdfObject").html("<object data='assets/docs/Carnival Flyer 2017 TicketPre.Sales.pdf#zoom=80&scrollbar=1&navpanes=1&page=1' " +
+                                        "type='application/pdf' width='100%' height='100%'></object>")
+                            }
                         </script>
                     </div>
 
