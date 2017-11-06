@@ -1,0 +1,45 @@
+/* TEAM */
+
+                            
+Your title: Maya Avramenko.
+
+                            
+Email: maya.avramenko@gmail.com
+
+                            
+Twitter: @MavraMaya
+
+                            
+Location: San Francisco, USA.
+
+                         
+                 
+                        [...]
+						
+
+							
+/* THANKS */
+
+							
+Photography : https://unsplash.com/
+
+						
+                 
+                        [...]
+                        
+
+                            
+/* SITE */
+
+                            
+Last update: 2017/11/06
+
+                            
+Standards: HTML5, CSS3,..
+
+                            
+Components: Google Font, Google Map, bootstrap,wow,fontawesome, jQuery, etc.
+
+                            
+Software: Andia Bootstrap Template by Anli,http://azmind.com/free-html-template-andia-responsive-agency-portfolio-template-twitter-bootstrap/
+
